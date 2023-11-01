@@ -1,3 +1,51 @@
 .heading {
     color: darkgreen;
+    background-color: beige;
+    height: 100px;
+    width: 200px;
+    border: 5px solid;
+    padding: 20px;
+    margin: 50px;
+    text-decoration: overline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 5px;
+    text-transform: capitalize;
+    letter-spacing: 10px;
+    word-spacing:10px;
+    text-shadow: 5px 5px 2px orange;
+}
+.paragraph {
+    text-align: justify;
+    text-indent: 100px;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+a{
+    color: blueviolet;
+    text-decoration: none;
+}
+a:visited{
+    color: brown;
+}
+a:active{
+    color: coral;
+}
+a:hover{
+    color: darkkhaki;
+}
+
+.container{
+    background-color: rgb(142, 185, 230);
+    height: 200px;
+    width: 400px;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: gold;
+    top: 20px;
+    left: 100px;
+    position: relative;
 }

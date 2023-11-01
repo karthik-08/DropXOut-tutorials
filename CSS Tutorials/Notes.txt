@@ -71,3 +71,71 @@ border-style , border-radius, border-width = top value,rightvalue,bottom,leftval
 we can use shorthand for above 
 
 border : 2px solid black or border-bottom seperately can be used  
+
+**** Box Model ****
+
+-> Essential components are : Content,padding,border,margin,height,width
+-> margin : top right bottom left this way u can write all the margin in top left right bottom at smae time 
+-> same applies for writing padding in same line for all directions.
+
+
+**** Text Formatting *****
+
+-> text-align : center for putting content in center
+                left for putting content in left
+                right for putting content in right
+                justify for making all content occupy all the space equally looks good.
+
+-> direction : ltr or rtl (left to right or right to left way text appears)
+-> text-decoration-line : overline or underline will put line accordingly.
+->text-decoration-style : can be dashed or dotted etc
+-> text-decoration-thickness: thickness of line underline in text
+-> text-transform : capitalize will capitalize all the first letter of a word , also other values
+are there like lower case and uppercase.
+-> text-indent : will add indentation to first word can be 50px or 30px etc
+-> letter spacing : will add spacing between letters. just put 20px
+-> word spacing : will add spacing between words . just put 20px
+->text-shadow : 2px(horizontal shadow) 2px(vertical shadow) 5px(blur) orange color of shadow
+
+******* Fonts ***********
+
+-> font-size : will set the size of font 
+-> font-family : will set the style of text /font
+-> font-weight : lighter or bold
+-> font-style : can italic or oblique etc
+
+***** Links ******
+these are some elements which can be added to anchor tags
+-> color:
+->text-decoration:none will remove underline of anchor text
+-> background-color: yellow 
+-> a:visited: u can set any color for those links which are alread visited.
+-> a:active : this is to set color of anchor link when it being clicked
+-> a:hover : this is to set color when we hover mouse on this link.
+
+***** Display ****
+-> display : inline , when u want some block level element to behave as inline element it helps
+-> display : block , this will make element behave as block level element
+-> display : hidden , this will completely disappear the element from the web page.
+-> visibility : hidden , this will hide the element but element will be there in the web page it will still occupy the space
+
+***** Position ******
+This about positioning of child with respect to its parent child.
+
+If we put position : static for child element it maintains default position even if we try to add spacing 
+top : 10px left : 50px This will not change the position.
+
+2. position : relative 
+then child element will maintain spacing accordingly to parent element 
+
+3. position : fixed 
+-> when thsi given, if we give spacing it will space itself accoding to root element 
+-> It maintains its position even when we scroll.
+
+4. Parent element : position-relative ; child element : position - absolute
+now when we give spacing to child element it may overflow the parent 
+to avoid overflowing in parent style we add overflow : scroll
+
+5. position : sticky given to child element along with top : 10px
+
+when we scroll the parent element , child elemeent becomes sticky to maintain top spacing of 10px
