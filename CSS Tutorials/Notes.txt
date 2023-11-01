@@ -1,0 +1,73 @@
+Firstly , we know that css can be applied inline, internal, external through some external file .
+
+Inline css : is when style is applied in the element attributes itself , and this has the highest
+priority against external and internal css.
+
+Internal css : is when css is applied in <style></style> tag in the same html file 
+External css : is applied through an external file css .and linked to the html file 
+in this way : <link href: path of stylesheet rel:stylesheet>
+
+highest priority is for inline css and between external and internal css 
+it depends what is read last , if external css is linked at last then external css will be applied finally 
+
+************************* Selectors *************************************
+
+1. universal Selectors : with this style will be applied to all the elements in the html file .
+                          *{
+                            key:value 
+                          }
+
+2. element Selectors : Selectors with the same name as html elements, with this style will be applied
+                        to all the elements of same class.
+                        for ex h1 Selector will apply the style to all the h1 elements in the html.
+
+3. class selectors : with this grouping of html elements can be done and particular style
+                     can be applied to that group . class attribute has to be given to the html elements 
+
+                    ex - .classname {
+                        apply css here
+                    }
+
+4. id selectors : id given to the html elements are unique to every html element.
+
+#id {
+    apply the style here
+}
+
+5. element selectors can be used with same body .
+h1,p{
+    color:blue;
+}
+
+
+Ways to insert colors in css .
+
+1. color : red,blue  or orange // we can directly state the color names.
+
+2. color:rgb(o to 255,0to 255,0 to 255)
+
+3. color : rgba(0-255,0-255,0-255,0-1) // last part is about transparency
+
+4. color : # 000000 // represents red-00, green-00, blue -00
+
+
+Background :
+
+some properties are : 
+
+background-color
+background-image:url(path of image)
+background-size : cover or 100% 100% means talking about height and width
+background-repeat : no-repeat
+background-position : center
+background-attachment : fixed
+we can use shorthand to represent all these values in one line 
+
+background : color url() center center/cover no-repeat fixed
+
+Border :
+
+border-style , border-radius, border-width = top value,rightvalue,bottom,leftvalue, border-color : top,right ,bottom,left
+we can use shorthand for above 
+
+border : 2px solid black or border-bottom seperately can be used  

@@ -1,0 +1,288 @@
+/* Basically console.log is used to print some string in the console and also we can embed some
+expressions arithmetic expression like 1+2,4+3 ETC and it will print the output
+of expressions */
+
+// type log itself in vs studio which is shortcut for console.log()
+
+/* Single line and multiline commenting 
+
+1. use // for single line comments in js
+2. Multi line comments can be done using forward slash star  star forward slash 
+3. commenting used to make some code inactive and also to increase readability of codes to understand 
+the source code to all the developers 
+*/
+
+******    VARIABLES ******
+
+1. variables are just a way to store a data.
+2. dont declare any variables without keywords like let,const,var .
+3.To strictly follow js code practices , mention in the script 'use strict' which ensures to follow
+  good coding practices. like it doesnot allow var keywords for declaring variables.
+
+4. do not start variables name with numbers, u can start with $,_,any alphabet and then followed by any
+   alphanumberic symbols can be used to declare variables .
+
+5. Difference bet var,let,const :
+
+var kewords allows variables to be declared multiple times which is not a good practice.
+
+ex: var name ="karthik"
+var name = "lalit"     -------> this is allowed 
+
+let name = (some string not in quotes) this gives syntax error as it assumes that it is variable.
+let keywords does not allow variables to be redeclared multiple times.but u can reassign the values to variables.
+
+const keywords are used for decalaring the constants in the code whose value once declared and assigned
+cannot be changed in the whole code.
+
+const variables reassigned with value gives typeerror which allows to give output for a script but
+stops execution where typeerror is coming .
+syntax error will not at all give  any output for a script having syntax error.
+
+let variables redeclared will give syntax error.
+const variables redeclared will give syntax error.
+const variables reassigned will give type error.
+
+*****************  DATA TYPES *************************
+There are 2 types : primitive and non primitive data types
+
+primitive: number,string,boolean,null,undefined
+non primitive: object,array,function
+
+null is special value assigned to any variable which in actual sense is some garbage value
+typeof on null variable gives data type as object which is flaw in js.
+string can be inserted in single or double quotes 
+boolean has only two values.
+undefined is when a variable is not defined by user itself with some value.
+boolean can take only two values : true or false
+
+**************** TYPE CONVERSION ******************************
+These all are implicit conversion :
+
+1.string(number) + number -----> string
+ here numbers given as string are considered.
+ '3'+2 = 32
+
+2. string(num) + boolean -----> string
+"3" + true = 3true
+
+3. string(num) + undefined -----> string
+'3'+undefined=3undefined
+
+4. string(num) + null -------> string
+'3'+null = 3null;
+
+5. string(num) - num -------> number
+'3'-2 = 1; // 3 is getting converted to number data type 
+
+6. string(num) - string ----> number
+'3' - 'hello' = NaN
+
+7. string(num) - boolean ------> number
+'3'-true = 1 // here '3' is converted to number and true is converted to number
+
+8. string(num) - null ------> number
+'3' - null = 3 // here '3' is converted to number and null is converted to 0(number)
+
+// Explicit conversion
+strings getting converted to number type (here actually numbers as strings are given for conversion)
+Number('3'); this will convert string data type to number type.
+
+NULL to Number
+Number(null) ---> 0
+
+explicit conversion to string type
+
+String(null) --> null ; type : string
+String(boolean) -- > string (true or false)
+
+decimal to integer :  parseInt(20.34)-> 20   type:number
+integer to float : parseFloat(20) type: number
+
+********** OPERATORS *******************
+
+1. arithmetic operators : +,-,/,*,%,**
+2.increment / decrement operators : ++,-- post and prefix
+3.comparison operators : <,>,==,!=,<=,>=
+special case : a='3',b=3 if(a==b) -> true here type conversion take place a is getting converted to number type which is not true as a is string type and b is number
+a=true,b=1 if(a==b)-> true here a is getting converted to number type true is conveted to 1 and then comparison takes place which is not true as a is boolean type and b is number type.
+so to avoid these lapses we use strict comparison operators
+=== , !== , this ensures strict comparison which checks the data type of operands and then checks value of operands
+
+4. logical operators : &&,||,! (not)
+
+
+******** conditional statements *********
+
+if else, if else ladder,nested if ,switch as usual stuff
+
+******* LOOPS *****
+
+for,while,do while 
+
+for(intialization,condtion check, increment/decrement) {}
+
+step 1: intialization
+step 2: test condition
+step 3: for loop body execution
+step 4: increment/decrement
+step 5: goto step2 if false termination of loop happens.
+
+syntax of while loop : it is used when we dont know exactly how many times loops has to be run.
+while(condtion){
+    body;
+    increment/decrement;
+}
+
+syntax of do while loop 
+
+intialization
+do{
+    ...
+    ...
+    increment/decrement;
+}while(condition);
+
+backticks concepts : `here any string can be printed but with this backticks we can embed any variable like this ${variable} `
+
+******* FUNCTIONS ************
+
+syntax : function function-name(parameters){ function body }
+
+1. functions are just a body of statements which helps to code better and just call the function to execute set of statements anywhere.
+2. can have paramenterised functions where it takes parameters and does some computation inside the function.
+3. function can have return statements which returns some values , dont have to mention return type in function signature.
+
+local and global variable
+1. local variables are defined within a block or function , they cannot be accessed out of that block where they r defined.
+2. global variables have global scope , can be accessed anywhere in the program.inside the functions also.
+
+Anonymous functions are those which do not have any function name
+
+function(a,b){ return a+b ;} but this cannot be called and will also give syntax error.
+
+always assign to variable or reference 
+
+let a = function(){
+  log();
+  log();
+};
+
+to call it : a(); have to mention paranthesis also 
+
+Anonymous functions can also self invoke themselves without assingnign them to variable 
+-> just wrap whole function body in paranthesis () and then call it using paranthesis ()
+example :
+
+(function(a,b,c){
+  let a = a+b;
+  let b=b+2;
+  console.log(a,b);
+})();
+
+Arrow function : just a short way of writing Anonymous functions 
+
+let a = function(a,b){return a+b;};
+a(); // this is normal way of calling 
+
+1. to convert it to arrow funcitons just remove function keyword and function name if any 
+2. u can further remove the paranthesis if funcitons have only one statement except return statements
+return statemenst should have paranthesis.
+
+
+************************ ARRAYS *******************************
+
+1. array indexing start from 0.
+2.array.length will give total length.
+3.array can hold different data types at same place.
+4.push() will insert element at last position .
+5. unshift() will insert element at first position.
+6.splice(start,no of elemnts to be deleted,new element)
+-> also be used to insert element without deleting in middle of array.
+-> splice also returns array of deleted elements and do not change original array.
+
+7. forEach method array is used to access each element.
+-> arrname.forEach((val,index,arr)=>{
+  here u can access value , index and array itself this is syntax.
+});
+
+-> let a = arrn.forEach(); this will  not return any thing to a here , a remains undefined.
+
+8. arrayname.map(); this will return new array to other variable.
+
+let a = arrayname.map(); same syntax as mentioned for forEach.
+
+9. concat is used to join 2 arrays. returns new array and dont change in original array.
+-> arr1.concat(arr2);
+
+10.arr.indexof(element) will give index and reutrns -1 for non existing elements.
+
+11. arr.reverse() will reverse whole array. also changes original array.
+
+12.arr.sort() will sort whole array but also changes original array.
+
+13. slice(start,end) will return portion of array without changing original array.
+-> will not include the element at end index.
+-> defautl  value of start is 0
+-> for both start and end negative index can be used to indicate offset from end of array.
+
+14. toString() : num.tostring() does not change origianl array.
+
+15. filter() : let a = arr.filter((val,index,arr)=>{
+  here can filter elements needed out of array
+}); // here a will be new array having filtered elements.
+
+16. find() : arr.find((val,ind,arr)=>{
+  here u can find any element you want in the given array. and return it.
+}) 
+
+17.findIndexOf() : arr.findIndexOf((val,index,arr)=>{
+  return val == 10;
+});
+this returns index of element found , scanning from left to right in array.
+
+18. findLastIndexOf() : same as above but scans from right to left in array.
+
+19. split() : arr.split(","); splits the whole string on basis of symbol given . returns new array.
+20. join() : used for arrays . arr.join(symbol) will join the elements of array with some symbol and returns whole string .
+
+21. for in : for (let index in arrayname) will give indexes of each element in array.
+22. for of :  for(let element of arrayname ) will return each element in the array. \
+
+23. Mulitdimension arrays : Array of arrays [[1,2,3],[4,5,6],[7,8,9],[10,11,12]];
+u can use for in ,forEach, for of for accessing the elements.
+
+
+************ copy,slice, spread ***************************
+
+1. let arr1=['abc','def','ghi','jkl'];
+-> arr2 = arr1; // bascially both are pointing to same array so changes will be dependent .
+2. to copy can use slice() : let arr2 = arr1.slice() this will create duplicate array and return to arr2 
+both the array are independent , so changes on one array will not impact the other one .
+
+3. u can use spread operator to copy whole array 
+let arr2 = [...arr1]; this duplicates the array and both arrays are independent .
+
+4. array destructuring : array is destructured , where all elments are unpacked form an array .
+let arr1 = ['abc','ccc','cbbb','poii','qqww'];
+let [it1,it2] = arr1 this will assign first two elements to it1,it2;
+let [it1,it2,...it3] =arr1 this will assign rest of elements to it3 array.
+
+
+******** objects in js ****************
+1. let obj = {         
+  key : value,
+  key : value,
+  key : value,
+  key : value
+}
+
+ let obj = {         
+  "key" : value,
+  "key" : value,
+  "key" : value,
+  "key" : value
+}
+
+for accessing : obj.key (this applies for both key and "key")
+obj["key"] this also works for both key and "key"
